@@ -3,7 +3,7 @@
 Este proyecto es una aplicación web sencilla para la gestión de citas médicas en un consultorio. Permite registrar, listar y eliminar citas, especificando el nombre del paciente, la especialidad y la fecha de la cita.
 
 ## Tecnologías utilizadas
-- PHP 8+
+- PHP 8.2.12
 - MySQL
 - Composer (para gestión de dependencias)
 - Bootstrap 5 (para la interfaz)
