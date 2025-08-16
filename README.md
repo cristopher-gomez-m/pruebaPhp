@@ -19,16 +19,13 @@ Este proyecto es una aplicación web sencilla para la gestión de citas médicas
 1. **Clona el repositorio**
 
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/cristopher-gomez-m/pruebaPhp.git
 cd citas-medicas
 ```
 
-
-2. **Instala las dependencias y genera el autoload con Composer**
+2. **Instala las dependencias con Composer**
 
 Asegúrate de tener [Composer](https://getcomposer.org/) instalado.
-
-Si no existe el archivo `vendor/autoload.php`, ejecuta:
 
 ```bash
 composer install
