@@ -29,7 +29,7 @@ switch ($action) {
         $citaController->store($_POST);
         break;
     case 'delete':
-        $citaController->delete($_POST['id']);
+        $citaController->delete($_GET['id']);
         break;
     case 'list':
     default:

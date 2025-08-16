@@ -43,6 +43,33 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Modal de error -->
+    <?php if (!empty($error)): ?>
+        <div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="modalErrorLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content border-danger">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title" id="modalErrorLabel">Error al guardar la cita</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <?= htmlspecialchars($error) ?>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const modalError = new bootstrap.Modal(document.getElementById('modalError'));
+            modalError.show();
+        </script>
+    <?php endif; ?>
+
     <script>
         // Función para validar solo letras en tiempo real
         function validarSoloLetras(input) {
@@ -69,13 +96,13 @@
                 const fechaSeleccionada = new Date(fechaInput.value);
                 const hoy = new Date();
                 hoy.setHours(0, 0, 0, 0);
-                
+
                 // Validación general de Bootstrap
                 if (!form.checkValidity()) {
                     event.preventDefault(); // Evita envío si hay errores
                     event.stopPropagation();
-                }else{
-                   // form.reset();
+                } else {
+                    // form.reset();
                 }
 
                 form.classList.add('was-validated');

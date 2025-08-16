@@ -21,6 +21,11 @@ class CitaService
 
     public function crear(string $nombre, string $especialidad, string $fecha): bool
     {
+        // Validación: solo letras y espacios
+        if (!preg_match("/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/", $nombre)) {
+            throw new Exception("El nombre solo puede contener letras y espacios");
+        }
+
         // Validación de fecha
         if (strtotime($fecha) < strtotime(date("Y-m-d"))) {
             throw new Exception("La fecha no puede estar en el pasado");

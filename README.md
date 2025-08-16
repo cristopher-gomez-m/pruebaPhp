@@ -20,7 +20,7 @@ Este proyecto es una aplicación web sencilla para la gestión de citas médicas
 
 ```bash
 git clone https://github.com/cristopher-gomez-m/pruebaPhp.git
-cd citas-medicas
+cd pruebaPhp
 ```
 
 2. **Instala las dependencias con Composer**
@@ -74,6 +74,14 @@ El proyecto sigue una arquitectura inspirada en el patrón de capas, separando r
 - **Model**: Representa la estructura de los datos (en este caso, una cita médica) y puede contener lógica relacionada con la entidad.
 
 Esta separación permite que cada capa tenga una única responsabilidad y facilita la reutilización y pruebas de cada componente.
+
+## Aspectos a mejorar
+
+- **Campos de auditoría**: Se pueden agregar campos como `fecha_ingreso`, `fecha_actualizacion` y `fecha_eliminacion` en la tabla de citas para llevar un registro de cuándo se crean, actualizan o eliminan los registros.
+- **Validaciones adicionales**: Mejorar las validaciones del lado del servidor, por ejemplo, para evitar duplicados.
+- **Autenticación y autorización**: Implementar un sistema de usuarios para que solo personal autorizado pueda gestionar las citas.
+- **API REST**: Exponer la funcionalidad mediante una API para integraciones o aplicaciones móviles.
+- **Paginación y búsqueda**: Agregar paginación y filtros en el listado de citas para mejorar la usabilidad.
 
 ## Licencia
 Este proyecto es solo para fines educativos.
